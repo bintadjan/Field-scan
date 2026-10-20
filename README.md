@@ -1,4 +1,4 @@
-**# Field Scan - Surveillance et Diagnostic Automatisé de Bananeraies
+# Field Scan - Surveillance et Diagnostic Automatisé de Bananeraies
 
 **Field Scan** est un projet d'IA autonome visant à surveiller la santé et la croissance d'une plantation industrielle de bananiers à l'aide de l'imagerie satellite (Copernicus Sentinel-2) et de la vision par ordinateur (classification des maladies foliaires).
 
@@ -19,4 +19,4 @@ Field-scan/
 ├── requirements.txt      # Liste des dépendances Python
 ├── README.md             # Présentation et guide du projet
 ├── semaine_1_decouverte.ipynb  # Notebook d'exploration initial (Semaine 1)
-└── src/                  # Modules Python (à venir)**
+└── src/                  # Modules Python (à venir)
