@@ -1,22 +1,29 @@
-# Field Scan - Surveillance et Diagnostic Automatisé de Bananeraies
+## Contexte : le bananier
 
-**Field Scan** est un projet d'IA autonome visant à surveiller la santé et la croissance d'une plantation industrielle de bananiers à l'aide de l'imagerie satellite (Copernicus Sentinel-2) et de la vision par ordinateur (classification des maladies foliaires).
+**Une plante, pas un arbre.** Le bananier est une très grande herbe. Son « tronc »
+est un faux-tronc formé de bases de feuilles enroulées, qui part d'une tige
+souterraine (le bulbe).
 
----
+**Pied mère et rejets.** Chaque pied mère produit un seul régime, puis il est coupé.
+À sa base poussent des rejets (nouvelles pousses). L'agriculteur en garde un
+qui remplace le pied mère : ce sont les « générations » successives. Avec le temps,
+la plantation devient plus dense, et les rejets se mélangent au pied mère.
 
-##  Objectifs du Projet
-1. **Suivi Temporel & Stress Hydrique** : Analyse des variations de NDVI/NDMI entre la saison sèche et la saison des pluies (Sentinel-2, EPSG:32717).
-2. **Comptage des Plants** : Détection et estimation du nombre de pieds de bananiers par parcelle.
-3. **Diagnostic des Maladies** : Classification fine des pathologies foliaires (*Black Sigatoka*, *Cordana*, *Pestalotiopsis*, *Fusarium*) à partir de photos de terrain.
+**Maladies principales.**
+- *La cercosporiose noire (Black Sigatoka)* : un champignon des feuilles. Elle débute
+  par de petites stries brunes, puis des taches noires cernées de jaune, et la feuille
+  finit par sécher. La plante produit moins, et les traitements sont fréquents et coûteux.
+- *La fusariose (Fusarium wilt)* : un champignon du sol qui attaque les vaisseaux de la
+  plante. Les vieilles feuilles jaunissent, puis la plante se flétrit. Elle est difficile
+  à repérer du ciel au début, et il n'existe pas de traitement.
 
----
+**Besoin en eau.** Le bananier consomme beaucoup d'eau et ses racines sont peu profondes :
+il souffre vite d'un manque d'irrigation.
 
-##  Structure du Dépôt
-
-```text
-Field-scan/
-├── data_card.md          # Fiche de traçabilité des données et licences
-├── requirements.txt      # Liste des dépendances Python
-├── README.md             # Présentation et guide du projet
-├── semaine_1_decouverte.ipynb  # Notebook d'exploration initial (Semaine 1)
-└── src/                  # Modules Python (à venir)
+**Ce que ça change pour le projet.**
+- Compter les pieds est difficile : la canopée est dense et les rejets sont cachés
+  par le pied mère.
+- Les premiers symptômes de maladie mesurent quelques millimètres, bien en dessous de la
+  résolution d'un satellite (10 m pour Sentinel-2).
+- Les photos de feuilles prises au sol ne ressemblent pas aux images prises du ciel :
+  cet écart est à documenter.
